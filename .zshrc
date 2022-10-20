@@ -103,6 +103,7 @@ plugins=(
 	kubectl
 	git
 	fzf
+	grc
 	docker
 	colored-man-pages
 	virtualenvwrapper
@@ -148,6 +149,9 @@ alias gsum="git ls-files | while read f; do git blame --line-porcelain \$f; done
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Colorized output
+[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh <$TTY
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mc mc
